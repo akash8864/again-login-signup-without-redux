@@ -1,8 +1,11 @@
 import React,{useState} from 'react'
 import '../login/Login.css'
 import axios from 'axios'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom'
 function Login({loginuser}) {
+    const notify = () => toast("Your Loggedin");
     const history=useHistory()
     const [User, setUser] = useState({
         email:"",
@@ -19,11 +22,16 @@ function Login({loginuser}) {
         const { email,password}=User
         if(email && password)
         {
+            notify()
            axios.post("/api/login",User).then((user)=>
            {
-            alert(user.data.message)
-             loginuser(user.data.user)
-              history.push("/")
+            
+           // alert(user.data.message)
+            setTimeout(() => {
+                loginuser(user.data.user)
+               history.push("/")
+            }, 1000);
+             
             })
         }
         else
@@ -41,6 +49,7 @@ function Login({loginuser}) {
     <input type="password" placeholder="Enter Password" name="password" value={User.password} onChange={change} />
     <br/>
     <button className="button" type="submit" onClick={submit}>Login</button>
+    <ToastContainer toastClassName={"bg-success text-white font-weight-bold"}/>
     <br/>
     <span>OR</span>
     <br/>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import '../register/Register.css'
 import axios from 'axios'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom'
 function Register() {
+    const notify = () => toast("Your Data is Saved");
     const history=useHistory()
     const [User, setUser] = useState({
         name:"",
@@ -21,8 +24,12 @@ function Register() {
            {
            axios.post("/api/register",User).then((user)=>
            {
-               alert(user.data.message)
-            history.push("/login")
+               notify()
+               setTimeout(() => {
+                //alert(user.data.message)
+                history.push("/login")
+               }, 2000);
+              
             })
            }
            else
@@ -43,6 +50,7 @@ function Register() {
     <input type="password" placeholder="Confirm Password" name="password2" value={User.password2} onChange={change} />
     <br/>
     <button type="submit" onClick={register} className="button">Register</button>
+    <ToastContainer toastClassName={"bg-success text-white font-weight-bold"}/>
     <br/>
     <span>OR</span>
     <br/>

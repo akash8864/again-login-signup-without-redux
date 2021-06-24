@@ -1,16 +1,17 @@
 .register
 {
-
+  margin-left: 350px;
     display: flex;
     border-radius: 20px;
     width: 50vw;
-    height: 700;
+    height: 700px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0 15px 5px gray;
     background: white;
     position: relative;
+    margin-top: 40px;
 }
 
 input {

@@ -33,7 +33,6 @@ router.post(
   "/login",(req,res)=>
   {
     const {email,password}=req.body; 
-    
     userSchema.findOne({email:email},(err,user)=>
     {
         if(user)
@@ -52,10 +51,18 @@ router.post(
             res.send({message:"user not registered"})
         }
     })
-
-
-
   });
 
+//   router.patch('/uptpass',(req,res)=>
+//   {
+//       const{email,password}=req.body
+//       userSchema.findOne({email:email},(err,user)=>
+//       {
+//           if(user.password==password)
+//           {
+
+//           }
+//       })
+//   })
 
 module.exports = router;

@@ -1,15 +1,18 @@
 .login
 {
+  margin-left: 350px;
     display: flex;
     border-radius: 20px;
     width: 50vw;
-    height: 45vw;
+    height: 50vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0 15px 5px gray;
     background: white;
     position: relative;
+    padding-top: 5px;
+    margin-top: 10px;
 }
 
 input {

@@ -1,17 +1,6 @@
 .homepage
 {
-   
-    text-align: center;
-    display: flex;
-    border-radius: 20px;
-    width: 50vw;
-    height: 30vw;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 15px 5px gray;
-    background: white;
-    position: relative;
+text-align: center;
 }
 .homepage>.button
 {
