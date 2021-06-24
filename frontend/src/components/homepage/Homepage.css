@@ -1,5 +1,7 @@
 .homepage
 {
+   
+    text-align: center;
     display: flex;
     border-radius: 20px;
     width: 50vw;

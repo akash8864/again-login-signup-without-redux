@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-<Route exact path="/">{user && user._id?<Homepage loginuser={setuser} />:<Login loginuser={setuser}/>}</Route>
+<Route exact path="/">{user && user._id?<Homepage loginuser={setuser} user={user}/>:<Login loginuser={setuser}/>}</Route>
 <Route path="/login"><Login loginuser={setuser}/></Route>
 <Route path="/signup"><Register/></Route>
         </Switch>
