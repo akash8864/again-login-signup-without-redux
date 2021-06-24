@@ -32,9 +32,9 @@ function Login({loginuser}) {
         }  
     }
     return (
-        
         <div className="login">
-            <h1>login</h1>
+            <h1>Login</h1>
+            <br/>
     <label htmlFor="email"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="email" value={User.email} onChange={change}/>
     <label htmlFor="psw"><b>Password</b></label>
