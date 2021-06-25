@@ -21,10 +21,10 @@ function Chgpwd() {
         {
             notify()
         }
-       else
-       {
-        axios.patch("/api/chgpwd",User);
-       }
+    //    else
+    //    {
+    //     axios.patch("/api/chgpwd",User);
+    //    }
         
     }
     return (

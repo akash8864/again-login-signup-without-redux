@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom'
 function Login({loginuser}) {
     const notify = () => toast("Your Loggedin");
+    const notify2 = () => toast("Please enter details");
     const history=useHistory()
     const [User, setUser] = useState({
         email:"",
@@ -33,7 +34,7 @@ function Login({loginuser}) {
         }
         else
         {
-            alert("please enter details")
+            notify2()
         }  
     }
     return (

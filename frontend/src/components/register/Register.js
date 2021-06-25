@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom'
 function Register() {
     const notify = () => toast("Your Data is Saved");
+    const notify2 = () => toast("please enter the details");
     const history=useHistory()
     const [User, setUser] = useState({
         name:"",
@@ -26,7 +27,6 @@ function Register() {
            {
                notify()
                setTimeout(() => {
-                //alert(user.data.message)
                 history.push("/login")
                }, 2000);
               
@@ -34,7 +34,7 @@ function Register() {
            }
            else
            {
-               alert("please enter details")
+               notify2()
            }
         }
     return (

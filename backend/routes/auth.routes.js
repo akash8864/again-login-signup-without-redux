@@ -53,12 +53,12 @@ router.post(
     })
   });
 
-// router.get("/chgpwd",(req,res)=>
+// router.post("/chgpwd",(req,res)=>
 // {
 //     const{email,password,newpassword}=req.body;
-//     userSchema.findOne(email,(err,user)=>
+//     userSchema.findByIdAndUpdate({email},{password:newpassword},(err,user)=>
 //     {
-//         res.send({user});
+//         res.send(user);
 //     })
 // })
 
