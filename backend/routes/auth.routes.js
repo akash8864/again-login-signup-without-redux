@@ -53,16 +53,14 @@ router.post(
     })
   });
 
-//   router.patch('/uptpass',(req,res)=>
-//   {
-//       const{email,password}=req.body
-//       userSchema.findOne({email:email},(err,user)=>
-//       {
-//           if(user.password==password)
-//           {
+// router.get("/chgpwd",(req,res)=>
+// {
+//     const{email,password,newpassword}=req.body;
+//     userSchema.findOne(email,(err,user)=>
+//     {
+//         res.send({user});
+//     })
+// })
 
-//           }
-//       })
-//   })
 
 module.exports = router;

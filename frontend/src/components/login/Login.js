@@ -11,7 +11,6 @@ function Login({loginuser}) {
         email:"",
         password:""
     })
-   
     const change=e=>
     {
        setUser({...User,[e.target.name]:e.target.value})
@@ -25,8 +24,6 @@ function Login({loginuser}) {
             notify()
            axios.post("/api/login",User).then((user)=>
            {
-            
-           // alert(user.data.message)
             setTimeout(() => {
                 loginuser(user.data.user)
                history.push("/")
